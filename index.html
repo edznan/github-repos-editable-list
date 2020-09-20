@@ -8,23 +8,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <title>GitHub API</title>
-
-    <style>
-        .pointer {
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
-  
-        <div class="container mt-4">
 
-            <h1 class="display-4 text-center">
-                <span id="loggedInUser"></span> GitHub Repositories
-            </h1>
-            <table class="table table-striped mt-5" id="repos-table">
+        <div class="container mt-4">
+ 
+        <form class="text-center">
+            <div class="form-group">
+                <input type="text" class="form-control" id="user" placeholder="Search by GitHub username...">
+            </div>
+        </form>
+
+        <h4 class="text-left mt-4" id="username"></h4>
+
+        <div class="alert alert-danger hidden" id="notfound"></div>
+
+            <table class="table table-striped mt-5" id="repositories-table">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -42,6 +44,8 @@
                     -->
                 </tbody>
             </table>
+
+            <div id="loader" class="hidden"></div>
             <br>
         </div>
 
@@ -51,7 +55,7 @@
                 <div class="modal-content">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title"><i class="fas fa-chevron-right mr-3"></i> Edit a repository</h4>
+                        <h4 class="modal-title"><i class="fas fa-chevron-right mr-3"></i> Edit repository details</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
@@ -77,7 +81,7 @@
                                 <label for="position">URL</label>
                                 <input type="text" id="url" name="url" class="form-control">
                             </div>
-                            <input type="submit" value="Submit" id="submit" class="btn btn-primary btn-block">
+                            <input type="submit" value="Save JSON" id="submit" class="btn btn-primary btn-block">
                         </form>
                     </div>
                     <!-- Modal footer -->
@@ -88,6 +92,6 @@
             </div>
         </div>
 
-      <script src="app.js"></script>
+      <script src="js/app.js"></script>
 </body>
 </html>

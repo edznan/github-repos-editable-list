@@ -1,4 +1,5 @@
 <?php 
+
 $id = '';
 $name = '';
 $language = '';
@@ -26,6 +27,6 @@ $array = Array (
 $json = json_encode($array);
 $bytes = file_put_contents($name .".json", $json); 
 
-//return to index.html page
+// return to index.html page
 header('Location: index.html');
 ?>
