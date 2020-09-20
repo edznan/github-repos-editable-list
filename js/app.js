@@ -41,7 +41,7 @@ insertData = async user => {
     //embed the username from search form to the URL 
     let url = `https://api.github.com/users/${user}/repos`;
     //GitHub API Personal Access Token:
-    let token = 'e5178d8232e324599137ddd93f3bf035a8538712';
+    let token = 'enteryourpersonaltokenhere';
     //make an API call
     let repositories = await getRepositories(url, token);
     //content to be inserted in the HTML
