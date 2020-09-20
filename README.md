@@ -13,4 +13,7 @@ PHP is used for saving json files locally. It simply creates a new array of the 
 # Installation
 
 In order to run it locally, just install XAMPP on your machine and clone this repo.
-Enter your GitHub personal access token in app.js file on line 44.
+
+# Important
+
+Enter your GitHub Personal Access Token in app.js file on line 44.
